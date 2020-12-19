@@ -1,0 +1,62 @@
+<mat-card class="customClass1">
+  <h1 class="customClass2">Registration</h1>
+  <hr>
+  <div class=" customClass2">
+    <mat-form-field class="customClass2" >
+      <mat-label>Nickname</mat-label>
+      <input matInput>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="customClass2" >
+      <mat-label>Email</mat-label>
+      <input matInput>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="customClass2">
+      <mat-label class="customClass2">Tara</mat-label>
+      <mat-select class="customClass3">
+        <mat-option class="customClass3" value="option">Romania</mat-option>
+        <mat-option class="customClass3" value="option">Republica Moldova</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="customClass2" >
+      <mat-label>Orasul</mat-label>
+      <input matInput>
+    </mat-form-field>
+    <br>
+
+    <form [formGroup]="myGroup" (ngSubmit)="$event.key.arataNM()" >
+      <mat-form-field >
+        <mat-label class="customClass2">Telephone</mat-label>
+        <span matPrefix>+4 &nbsp;</span>
+        <input formControlName="numerTele" type="tel" matInput placeholder="0712-456-789">
+        <mat-icon matSuffix>dialpad</mat-icon>
+      </mat-form-field>
+    </form>
+    <mat-form-field class="customClass2" >
+      <mat-label>Password</mat-label>
+      <input matInput type="password">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field class="customClass2" >
+      <mat-label>Password</mat-label>
+      <input matInput type="password">
+    </mat-form-field>
+    <br>
+
+    <mat-checkbox > </mat-checkbox>  I agree to the<a (click)="openDialog()">  terms and conditions</a>
+ <div >
+   <button mat-raised-button class="customClass4">Help?</button>
+   <button mat-raised-button class="customClass4" color="primary">Regisration</button>
+ </div>
+  </div>
+
+
+
+
+
+
+
+</mat-card>

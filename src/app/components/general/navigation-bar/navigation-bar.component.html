@@ -1,0 +1,27 @@
+<mat-toolbar>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>
+  All areas
+  </span>
+  <span class="example-spacer"></span>
+
+  <a [routerLink]="['/']" > <h1>iAbout</h1>
+  </a>
+  <span class="example-spacer"></span>
+
+  <button mat-button (click)="registrationAccount()" >
+    <h1>Registration <span class="material-icons">
+    person_add
+    </span> </h1>
+  </button>
+
+  <button mat-button (click)="loginAccount()" >
+    <h1>Login <span class="material-icons">
+    login
+    </span></h1>
+
+
+  </button>
+</mat-toolbar>
