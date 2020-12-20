@@ -15,6 +15,7 @@ export class RegPagComponent{
   myGroup = new FormGroup({
     numerTele: new FormControl()
   });
+  hide: boolean;
 
   arataNM(): void {
     console.log(this.numerTele);

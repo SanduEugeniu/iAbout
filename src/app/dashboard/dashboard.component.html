@@ -1,0 +1,36 @@
+<!--<div class="customClassDashboard2">-->
+<!--  <p>how we help you?-->
+<!--    <input type="text" placeholder="Search" aria-label="Search"></p>-->
+<!--</div>-->
+<mat-grid-list class="customClassDashboard1" cols="5" rowHeight="90%">
+    <mat-grid-tile >
+      <mat-list role="list" class="customClassDashboard2"l>
+        <mat-list-item role="listitem">    <h2 class="customClassDashboard2" >Helou: Your Nickname</h2></mat-list-item>
+        <hr>
+        <mat-list-item role="listitem">    <button class="customClassDashboard2" mat-button (click)="goMyDashboard()">My dashboard</button></mat-list-item>
+        <mat-list-item role="listitem">    <button class="customClassDashboard2" mat-button (click)="goMyPosts()">My posts</button></mat-list-item>
+        <mat-list-item role="listitem">    <button class="customClassDashboard2" mat-button (click)="goMyMessages()">My messages</button></mat-list-item>
+        <mat-list-item role="listitem">    <button class="customClassDashboard2" mat-button (click)="goMySetiings()">My settings</button></mat-list-item>
+        <mat-list-item role="listitem">    <button class="customClassDashboard2" mat-button (click)="goMyProfit()">My profit</button></mat-list-item>
+
+        <hr>
+
+        <mat-list-item role="listitem">    <button class="customClassDashboard2" mat-button (click)="goINeedAdvertising()">I need advertising?</button></mat-list-item>
+        <mat-list-item role="listitem">    <button class="customClassDashboard2" mat-button (click)="goReceiveTheMoney()">Receive the money</button></mat-list-item>
+        <mat-list-item role="listitem">    <button class="customClassDashboard2" mat-button (click)="goEnterMoney()">Enter money</button></mat-list-item>
+
+        <hr>
+
+        <mat-list-item role="listitem">    <button class="customClassDashboard2" mat-button mat-button (click)="goTermsAndConditions()">Terms and conditions</button></mat-list-item>
+        <mat-list-item role="listitem">    <button class="customClassDashboard2" mat-button mat-button (click)="goCustomerSuport()">customer support</button></mat-list-item>
+        <mat-list-item role="listitem">    <button class="customClassDashboard2" mat-button mat-button (click)="goHelp()">Help</button></mat-list-item>
+
+      </mat-list>
+
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]= 4> <mat-list role="list">
+      <router-outlet></router-outlet>
+
+    </mat-list></mat-grid-tile>
+
+  </mat-grid-list>

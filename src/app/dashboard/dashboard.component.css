@@ -1,0 +1,16 @@
+mat-grid-tile {
+  background: #f5f4f4;
+}
+.customClassDashboard1{
+  width: 80%;
+  margin: auto;
+  margin-block-end: 3%;
+  margin-top: 3%;
+}
+.customClassDashboard2{
+  width: 100%;
+  letter-spacing: 2px;
+  margin: auto;
+  margin-top: 10px;
+
+}

@@ -6,13 +6,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ComponentsModule} from './components/components.module';
 import {SimplePagesModule} from './simple-pages/simple-pages.module';
+import {DashboardModule} from './dashboard/dashboard.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
+    DashboardModule,
     SimplePagesModule,
     ComponentsModule,
     BrowserModule,

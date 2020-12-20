@@ -7,6 +7,17 @@ import {TermsAndConditionsComponent} from './simple-pages/terms-and-conditions/t
 import {WhatDoYouNeedToKnowAboutUsComponent} from './simple-pages/what-do-you-need-to-know-about-us/what-do-you-need-to-know-about-us.component';
 import {RegPagComponent} from './simple-pages/reg-pag/reg-pag.component';
 import {NotFoundComponent} from './components/general/not-found/not-found.component';
+import {DashboardComponent} from './dashboard/dashboard.component';
+import {MyResultsComponent} from './dashboard/pagesForDashboard/firstGrupPages/my-dashboard/my-results.component';
+import {MyPostsComponent} from './dashboard/pagesForDashboard/firstGrupPages/my-posts/my-posts.component';
+import {MyProfitComponent} from './dashboard/pagesForDashboard/firstGrupPages/my-profit/my-profit.component';
+import {MyMessagesComponent} from './dashboard/pagesForDashboard/firstGrupPages/my-messages/my-messages.component';
+import {MySettingsComponent} from './dashboard/pagesForDashboard/firstGrupPages/my-settings/my-settings.component';
+import {INeedAdvertisingComponent} from './dashboard/pagesForDashboard/secondGrupPages/i-need-advertising/i-need-advertising.component';
+import {ReceiveTheMoneyComponent} from './dashboard/pagesForDashboard/secondGrupPages/receive-the-money/receive-the-money.component';
+import {EnterMoneyComponent} from './dashboard/pagesForDashboard/secondGrupPages/enter-money/enter-money.component';
+import {CustomerSupportComponent} from './dashboard/pagesForDashboard/thirdGrupPages/customer-support/customer-support.component';
+import {HelpComponent} from './dashboard/pagesForDashboard/thirdGrupPages/help/help.component';
 
 
 
@@ -18,6 +29,20 @@ const routes: Routes = [
   {path: 'how-do-we-win-togetherx', component: HowDoWeWinTogetherComponent},
   {path: 'terms-and-conditions', component: TermsAndConditionsComponent},
   {path: 'what-do-you-need-to-know-about-us', component: WhatDoYouNeedToKnowAboutUsComponent},
+  {path: 'customerSupport', component: CustomerSupportComponent},
+  {path: 'help', component: HelpComponent},
+  {path: 'dashboard', component: DashboardComponent,
+    children: [
+      { path: '', component: MyResultsComponent },
+      { path: 'myPosts', component: MyPostsComponent },
+      { path: 'myProfit', component: MyProfitComponent },
+      { path: 'myMessages', component: MyMessagesComponent },
+      { path: 'mySettings', component: MySettingsComponent },
+      { path: 'iNeedAdvertising', component: INeedAdvertisingComponent },
+      { path: 'receiveTheMoney', component: ReceiveTheMoneyComponent },
+      { path: 'enterMoney', component: EnterMoneyComponent },
+    ]},
+
   // Not Found
   {path: '**', component: NotFoundComponent},
 

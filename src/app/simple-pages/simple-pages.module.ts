@@ -48,6 +48,7 @@ import {MatButtonModule} from '@angular/material/button';
   imports: [
     MatButtonModule,
     MatDialogModule,
+    MatFormFieldModule,
     MatTabsModule,
     MatIconModule,
     ComponentsModule,

@@ -13,6 +13,7 @@ import {NavigationBarComponent} from './general/navigation-bar/navigation-bar.co
 import {FooterBarComponent} from './general/footer-bar/footer-bar.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { NotFoundComponent } from './general/not-found/not-found.component';
+import {MatMenuModule} from '@angular/material/menu';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { NotFoundComponent } from './general/not-found/not-found.component';
     MatListModule,
     MatButtonModule,
     MatIconModule,
+    MatMenuModule,
     CommonModule,
     MatTabsModule
   ],

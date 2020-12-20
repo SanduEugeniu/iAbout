@@ -2,8 +2,8 @@
 .customClass1{
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5%;
-  margin-block-end: 10%;
+  margin-top: 15%;
+  margin-block-end: 15%;
   width: 40%;
   position: center;
   padding-top: 10px;
@@ -17,8 +17,8 @@
   margin-left: auto;
 }
 .customClass4{
-  margin-top: 20px;
-
+  margin-top: 30px;
+  margin-block-end: 20px;
   text-align: center;
   letter-spacing: 2px;
   width: 30%;
