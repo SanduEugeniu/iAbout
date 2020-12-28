@@ -5,7 +5,7 @@ mat-grid-tile {
   width: 80%;
   margin: auto;
   margin-block-end: 3%;
-  margin-top: 3%;
+  margin-top: 0%;
 }
 .customClassDashboard2{
   width: 100%;
@@ -13,4 +13,16 @@ mat-grid-tile {
   margin: auto;
   margin-top: 10px;
 
+}
+button{
+  padding: 15px;
+  margin-left: 10%;
+  margin-top: 3%;
+  width: 80%;
+
+}
+.colorB{
+  letter-spacing: 2px;
+
+  background-color: rgb(221, 255, 204);
 }

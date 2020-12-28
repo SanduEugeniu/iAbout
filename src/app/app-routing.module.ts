@@ -19,6 +19,7 @@ import {EnterMoneyComponent} from './dashboard/pagesForDashboard/secondGrupPages
 import {CustomerSupportComponent} from './dashboard/pagesForDashboard/thirdGrupPages/customer-support/customer-support.component';
 import {HelpComponent} from './dashboard/pagesForDashboard/thirdGrupPages/help/help.component';
 import {ConfirmMailComponent} from './simple-pages/reg-pag/confirm-mail/confirm-mail.component';
+import {AddPostComponent} from './simple-pages/add-post/add-post.component';
 
 
 
@@ -33,6 +34,7 @@ const routes: Routes = [
   {path: 'what-do-you-need-to-know-about-us', component: WhatDoYouNeedToKnowAboutUsComponent},
   {path: 'customerSupport', component: CustomerSupportComponent},
   {path: 'help', component: HelpComponent},
+  {path: 'add-post', component: AddPostComponent},
   {path: 'dashboard', component: DashboardComponent,
     children: [
       { path: '', component: MyResultsComponent },

@@ -62,4 +62,8 @@ export class DashboardComponent implements OnInit {
     this.router.navigate(['/help'] );
 
   }
+
+  goAddPost(): void {
+    this.router.navigate(['/add-post'] );
+  }
 }

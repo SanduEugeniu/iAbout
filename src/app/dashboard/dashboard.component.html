@@ -2,9 +2,11 @@
 <!--  <p>how we help you?-->
 <!--    <input type="text" placeholder="Search" aria-label="Search"></p>-->
 <!--</div>-->
+<button mat-raised-button class="colorB" (click)="goAddPost()" >Add Post</button>
+
 <mat-grid-list class="customClassDashboard1" cols="5" rowHeight="90%">
     <mat-grid-tile >
-      <mat-list role="list" class="customClassDashboard2"l>
+      <mat-list role="list" class="customClassDashboard2">
         <mat-list-item role="listitem">    <h2 class="customClassDashboard2" >Helou: {{this.lS.data.user.name}} </h2></mat-list-item>
         <hr>
         <mat-list-item role="listitem">    <button class="customClassDashboard2" mat-button (click)="goMyDashboard()">My dashboard</button></mat-list-item>

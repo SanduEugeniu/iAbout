@@ -27,9 +27,9 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
 import {NavigationBarComponent} from '../components/general/navigation-bar/navigation-bar.component';
 import { ConfirmMailComponent } from './reg-pag/confirm-mail/confirm-mail.component';
-
-
-
+import {AddPostComponent, BottomComponent} from './add-post/add-post.component';
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+import {MatListModule} from '@angular/material/list';
 @NgModule({
   declarations: [
     Tabs1Component,
@@ -46,12 +46,15 @@ import { ConfirmMailComponent } from './reg-pag/confirm-mail/confirm-mail.compon
     LabelHelpComponent,
     RegPagComponent,
     DialogElementsExampleDialog,
-    ConfirmMailComponent
+    ConfirmMailComponent,
+    AddPostComponent,
+    BottomComponent,
   ],
   imports: [
     MatButtonModule,
     MatDialogModule,
     MatFormFieldModule,
+    MatBottomSheetModule,
     MatTabsModule,
     MatIconModule,
     ComponentsModule,
@@ -59,6 +62,7 @@ import { ConfirmMailComponent } from './reg-pag/confirm-mail/confirm-mail.compon
     MatCardModule,
     MatFormFieldModule,
     MatTabsModule,
+    MatListModule,
     ReactiveFormsModule,
     CommonModule,
     MatOptionModule,
