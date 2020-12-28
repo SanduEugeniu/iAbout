@@ -25,6 +25,8 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
+import {NavigationBarComponent} from '../components/general/navigation-bar/navigation-bar.component';
+import { ConfirmMailComponent } from './reg-pag/confirm-mail/confirm-mail.component';
 
 
 
@@ -43,7 +45,8 @@ import {MatButtonModule} from '@angular/material/button';
     LabelNewAuthorsComponent,
     LabelHelpComponent,
     RegPagComponent,
-    DialogElementsExampleDialog
+    DialogElementsExampleDialog,
+    ConfirmMailComponent
   ],
   imports: [
     MatButtonModule,
@@ -64,6 +67,10 @@ import {MatButtonModule} from '@angular/material/button';
 
 
   ],
+  providers: [
+    NavigationBarComponent
+  ],
+
   exports: [
     Tabs1Component,
     LoginPageComponent,

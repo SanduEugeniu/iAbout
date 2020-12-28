@@ -18,6 +18,7 @@ import {ReceiveTheMoneyComponent} from './dashboard/pagesForDashboard/secondGrup
 import {EnterMoneyComponent} from './dashboard/pagesForDashboard/secondGrupPages/enter-money/enter-money.component';
 import {CustomerSupportComponent} from './dashboard/pagesForDashboard/thirdGrupPages/customer-support/customer-support.component';
 import {HelpComponent} from './dashboard/pagesForDashboard/thirdGrupPages/help/help.component';
+import {ConfirmMailComponent} from './simple-pages/reg-pag/confirm-mail/confirm-mail.component';
 
 
 
@@ -26,6 +27,7 @@ const routes: Routes = [
   {path: '', component: Tabs1Component},
   {path: 'loggingIn', component: LoginPageComponent},
   {path: 'registration', component: RegPagComponent},
+  {path: 'confirm-mail', component: ConfirmMailComponent },
   {path: 'how-do-we-win-togetherx', component: HowDoWeWinTogetherComponent},
   {path: 'terms-and-conditions', component: TermsAndConditionsComponent},
   {path: 'what-do-you-need-to-know-about-us', component: WhatDoYouNeedToKnowAboutUsComponent},
