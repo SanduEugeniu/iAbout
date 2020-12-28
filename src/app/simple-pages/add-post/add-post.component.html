@@ -1,0 +1,34 @@
+<mat-card class="customClass1">
+  <h1 class="customClass2">Add Post</h1>
+  <hr>
+  <mat-form-field class="example-full-width">
+    <mat-label>select the category</mat-label>
+    <mat-select class="customClassText" [(value)]="selected">
+      <mat-option class="customClassText" value="Piata-crypto">Piata-crypto</mat-option>
+      <mat-option class="customClassText" value="Noutati">Noutati</mat-option>
+      <mat-option class="customClassText" value="Programare">Programare</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <hr>
+  <p>add the post in the category {{selected}}?
+    if the post does not match the category it will be blocked</p>
+  <hr>
+
+
+  <mat-form-field class="example-full-width">
+      <mat-label>Post title</mat-label>
+      <input  class="customClassText" matInput placeholder="Ce urmeaza cu bitcon, care va fi pretul la sfarsitul anului??!" >
+    </mat-form-field>
+  <hr>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Post content</mat-label>
+      <textarea class="customClassText"  rows="10" matInput placeholder="Ce urmeaza cu bitcon, care va fi pretul la sfarsitul anului??!"></textarea>
+    </mat-form-field>
+  <hr>
+  <p>if you want you can add a picture</p>
+  <button class="example-full-width" mat-raised-button (click)="openBottomSheet()">Open file</button>
+  <hr>
+  <button mat-raised-button class="colorB" (click)="finishAddPost()" >Add Post</button>
+
+</mat-card>
