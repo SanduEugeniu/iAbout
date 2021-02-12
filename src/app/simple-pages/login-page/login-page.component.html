@@ -2,7 +2,7 @@
   <h1 class="customClass2">Login</h1>
   <hr>
   <div class=" customClass2">
-    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <form *ngIf="!loading" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
       <div class="form-group">
         <mat-label>Email</mat-label>
         <input type="email" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
@@ -26,6 +26,7 @@
         Login
       </button>
     </form>
+    <mat-spinner *ngIf="loading" class="spiner-model" ></mat-spinner>
 
   </div>
 

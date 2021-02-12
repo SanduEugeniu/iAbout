@@ -19,7 +19,6 @@ export class LoginPageComponent implements OnInit {
   submitted = false;
   returnUrl: string;
   error = '';
-  e404 = 'Email incorect';
 
   constructor(
     private navBar: NavigationBarComponent,
@@ -61,8 +60,9 @@ export class LoginPageComponent implements OnInit {
       .subscribe(
         data => {
           if (data.success) {
+            console.log(data);
+
             this.router.navigate([this.returnUrl]);
-            console.log(data.success);
           }else {
             console.log(data);
             this.error = data.data.message;

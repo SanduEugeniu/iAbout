@@ -26,8 +26,6 @@ export class RegistrationService {
     return this.http.post<any>(`${environment.apiUrl}/auth/email/register`, { email, password, firstName, lastName })
       .pipe(map(user => {
         return user;
-        this.user = user;
-
       }));
 
   }

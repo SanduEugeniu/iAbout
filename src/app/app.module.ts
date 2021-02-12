@@ -7,19 +7,42 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ComponentsModule} from './components/components.module';
 import {SimplePagesModule} from './simple-pages/simple-pages.module';
 import {DashboardModule} from './dashboard/dashboard.module';
-
+import { PostComponent } from './post/post.component';
+import {PostModule} from './post/post.module';
+import { AllCategoriesComponent } from './all-categories/all-categories.component';
+import { AdsenseModule } from 'ng2-adsense';
+import { PostPageComponent } from './post-page/post-page.component';
+import {MatCardModule} from '@angular/material/card';
+import { ComentComponent } from './post-page/coment/coment.component';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
+import { QuillModule } from 'ngx-quill';
 
 @NgModule({
   declarations: [
     AppComponent,
+    AllCategoriesComponent,
+    PostPageComponent,
+    ComentComponent,
   ],
   imports: [
+    PostModule,
     DashboardModule,
     SimplePagesModule,
     ComponentsModule,
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AdsenseModule.forRoot({
+      adClient: 'ca-pub-2075992240344220',
+      adSlot: 8364724526,
+    }),
+    MatCardModule,
+    MatButtonModule,
+    MatIconModule,
+    MatMenuModule,
+    QuillModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

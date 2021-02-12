@@ -29,25 +29,18 @@ export class RegPagComponent implements OnInit {
   ) {
     // redirect to home if already logged in
     if (this.registrationService.currentUserValue) {
-      // this.router.navigate(['/dashboard']);
+      this.router.navigate(['/dashboard']);
     }
   }
 
   ngOnInit(): any {
-    this.RegistrationForm = this.formBuilder.group({
-      email: ['', Validators.required],
-      password: ['',  Validators.minLength(8)],
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required]
+    this.RegistrationForm = new FormGroup({
+      email: new FormControl('', [Validators.email, Validators.required]),
+      password: new FormControl('', [Validators.minLength(8), Validators.required]),
+      firstName: new FormControl('', [Validators.required]),
+      lastName: new FormControl('', [Validators.required])
     });
-
-    // get return url from route parameters or default to '/'
-    this.returnUrl = this.route.snapshot.queryParams.returnUrl || '/dashboard';
   }
-
-  // convenience getter for easy access to form fields
-  // tslint:disable-next-line:typedef
-  get f() { return this.RegistrationForm.controls; }
 
   onSubmit(): any {
     this.submitted = true;
@@ -57,7 +50,10 @@ export class RegPagComponent implements OnInit {
     }
 
     this.loading = true;
-    this.registrationService.registration(this.f.email.value, this.f.firstName.value, this.f.lastName.value, this.f.password.value)
+    this.registrationService.registration(this.RegistrationForm.controls.email.value,
+                                          this.RegistrationForm.controls.firstName.value,
+                                          this.RegistrationForm.controls.lastName.value,
+                                          this.RegistrationForm.controls.password.value)
       .pipe(first())
       .subscribe(
         data => {
@@ -65,10 +61,12 @@ export class RegPagComponent implements OnInit {
             console.log('sad');
             this.router.navigate(['confirm-mail']);
         }else {
-          this.error = data.data.message;
-          this.loading = false;
+            this.loading = false;
+            this.error = data.data.message;
         }
-        });
+        },
+        this.loading = false
+  );
   }
 
 

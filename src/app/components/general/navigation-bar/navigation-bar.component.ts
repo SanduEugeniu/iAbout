@@ -1,6 +1,8 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {NavigationEnd, Router} from '@angular/router';
 import {AuthenticationService} from '../../../simple-pages/login-page/_service/authentication.service';
+import {CurentUserService} from "../../../common/_services/curent-user.service";
+import {DomSanitizer} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-navigation-bar',
@@ -9,9 +11,12 @@ import {AuthenticationService} from '../../../simple-pages/login-page/_service/a
 })
 export class NavigationBarComponent implements OnInit {
   auth = false;
-
+  curentUser: any;
+  imageSource: any;
   constructor(private router: Router,
-              private authS: AuthenticationService
+              private authS: AuthenticationService,
+              private curentUserService: CurentUserService,
+              private sanitizer: DomSanitizer
   ) {
   }
 
@@ -21,6 +26,7 @@ export class NavigationBarComponent implements OnInit {
   }
 
   loginAccount(): void {
+    this.curentUserService.user();
     this.router.navigate(['/loggingIn']);
 
   }
@@ -30,16 +36,29 @@ export class NavigationBarComponent implements OnInit {
     this.router.navigate(['/']);
 
   }
-
-  ngOnInit(): void {
-    // if (!localStorage.getItem('currentUser')) {
-    // } else {
-    //   this.auth = JSON.parse(localStorage.getItem('currentUser')).success;
-    // }
+  goDashboard(): void {
+    this.router.navigate(['/dashboard']);
   }
 
-  reload(): void {
-    // this.router.navigate(['dashboard']);
-    console.log(this.auth);
+  ngOnInit(): void {
+    this.authS.currentUser.subscribe(v => {
+   if (!v) {
+     this.auth = false;
+
+   }else {
+     this.auth = v.success;
+     this.curentUser = v.data.user;
+     // this.imageSource = this.sanitizer.bypassSecurityTrustResourceUrl('data:image/png;base64,' + v.data.user.photos.profilePic.tags[0]);
+
+   }
+ });
+  }
+
+  goMyPosts(): void {
+    this.router.navigate(['/dashboard/myPosts'] );
+  }
+
+  goMySettings(): void {
+    this.router.navigate(['/dashboard/mySettings'] );
   }
 }

@@ -2,27 +2,55 @@ mat-grid-tile {
   background: #f5f4f4;
 }
 .customClassDashboard1{
-  width: 80%;
+  width: 90%;
   margin: auto;
-  margin-block-end: 3%;
-  margin-top: 0%;
+}
+.customClassDashboard3{
+  width: 90%;
+  margin: auto;
 }
 .customClassDashboard2{
-  width: 100%;
+  width: 90%;
+  letter-spacing: 2px;
+  /*margin: auto;*/
+  margin-top: 10px;
+  text-align: left;
+}
+.customClassDashboard4{
   letter-spacing: 2px;
   margin: auto;
-  margin-top: 10px;
+  margin-left: 5%;
+  padding-right: 300px;
+  /*display: list-item;*/
 
 }
-button{
-  padding: 15px;
-  margin-left: 10%;
-  margin-top: 3%;
-  width: 80%;
+ul {
+  margin-left: 5%;
+  list-style-type: none;
+  /*margin: 0;*/
+  padding: 0px;
+  overflow: hidden;
+}
+
+li {
+  margin-left: 20px;
+  float: left;
+  /*width: 0%;*/
+  display: block;
+  /*color: white;*/
+  /*text-align: center;*/
+  /*padding: 14px 16px;*/
+  /*text-decoration: none;*/
 
 }
+
+
 .colorB{
   letter-spacing: 2px;
-
+  padding: 15px;
+  margin: auto;
+  margin-left: 5%;
+  margin-top: 3%;
+  width: 90%;
   background-color: rgb(221, 255, 204);
 }

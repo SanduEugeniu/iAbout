@@ -1,38 +1,79 @@
-<!--<div class="customClassDashboard2">-->
-<!--  <p>how we help you?-->
-<!--    <input type="text" placeholder="Search" aria-label="Search"></p>-->
-<!--</div>-->
-<button mat-raised-button class="colorB" (click)="goAddPost()" >Add Post</button>
-
-<mat-grid-list class="customClassDashboard1" cols="5" rowHeight="90%">
-    <mat-grid-tile >
-      <mat-list role="list" class="customClassDashboard2">
-        <mat-list-item role="listitem">    <h2 class="customClassDashboard2" >Helou: {{this.lS.data.user.name}} </h2></mat-list-item>
-        <hr>
-        <mat-list-item role="listitem">    <button class="customClassDashboard2" mat-button (click)="goMyDashboard()">My dashboard</button></mat-list-item>
-        <mat-list-item role="listitem">    <button class="customClassDashboard2" mat-button (click)="goMyPosts()">My posts</button></mat-list-item>
-        <mat-list-item role="listitem">    <button class="customClassDashboard2" mat-button (click)="goMyMessages()">My messages</button></mat-list-item>
-        <mat-list-item role="listitem">    <button class="customClassDashboard2" mat-button (click)="goMySetiings()">My settings</button></mat-list-item>
-        <mat-list-item role="listitem">    <button class="customClassDashboard2" mat-button (click)="goMyProfit()">My profit</button></mat-list-item>
-
-        <hr>
-
-        <mat-list-item role="listitem">    <button class="customClassDashboard2" mat-button (click)="goINeedAdvertising()">I need advertising?</button></mat-list-item>
-        <mat-list-item role="listitem">    <button class="customClassDashboard2" mat-button (click)="goReceiveTheMoney()">Receive the money</button></mat-list-item>
-        <mat-list-item role="listitem">    <button class="customClassDashboard2" mat-button (click)="goEnterMoney()">Enter money</button></mat-list-item>
-
-        <hr>
-
-        <mat-list-item role="listitem">    <button class="customClassDashboard2" mat-button mat-button (click)="goTermsAndConditions()">Terms and conditions</button></mat-list-item>
-        <mat-list-item role="listitem">    <button class="customClassDashboard2" mat-button mat-button (click)="goCustomerSuport()">customer support</button></mat-list-item>
-        <mat-list-item role="listitem">    <button class="customClassDashboard2" mat-button mat-button (click)="goHelp()">Help</button></mat-list-item>
-
-      </mat-list>
-
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]= 4> <mat-list role="list">
+<button mat-raised-button class="colorB" (click)="goAddPost()"> <span class="material-icons">
+border_color
+</span> Adauga postare
+</button>
+<hr width="80%">
+<ul style="margin-left: 10%">
+  <li>
+    <button class="customClassDashboard4" mat-button [matMenuTriggerFor]="aboveMenu"><span class="material-icons">
+web
+</span> Paunoul de control
+    </button>
+    <mat-menu #aboveMenu="matMenu">
+      <button class="customClassDashboard2" mat-button (click)="goMyPosts()"> <span class="material-icons">
+all_inbox
+</span>  Postarile mele
+      </button>
+      <button class="customClassDashboard2" mat-button (click)="goMyMessages()"><span class="material-icons">
+message
+</span>  Mesagele</button>
+      <button class="customClassDashboard2" mat-button (click)="goMySetiings()"><span class="material-icons">
+settings
+</span>  Setari</button>
+      <button class="customClassDashboard2" mat-button (click)="goMyProfit()"><span class="material-icons">
+account_box
+</span>  Profilul meu</button>
+    </mat-menu>
+  </li>
+  <li>
+    <button class="customClassDashboard4" mat-button [matMenuTriggerFor]="belowMenu" disabled><span class="material-icons">
+receipt_long
+</span> Informatii utile
+    </button>
+    <mat-menu #belowMenu="matMenu" yPosition="below">
+      <button class="customClassDashboard2" mat-button (click)="goINeedAdvertising()"><span class="material-icons">
+add_shopping_cart
+</span>  Am nevoie de publicitate?</button>
+      <button class="customClassDashboard2" mat-button (click)="goReceiveTheMoney()"><span class="material-icons">
+import_export
+</span>  Extragerea iAb</button>
+      <button class="customClassDashboard2" mat-button (click)="goEnterMoney()"><span class="material-icons">
+import_export
+</span>  Depunerea iAb</button>
+    </mat-menu>
+  </li>
+  <li>
+    <button mat-button class="customClassDashboard4" [matMenuTriggerFor]="belowMenu1"><span class="material-icons">
+support
+</span> Ajutor
+    </button>
+    <mat-menu #belowMenu1="matMenu" yPosition="below">
+      <button class="customClassDashboard2" mat-button mat-button (click)="goTermsAndConditions()"><span class="material-icons">
+assignment_turned_in
+</span>  Termeni si conditii
+      </button>
+      <button class="customClassDashboard2" mat-button mat-button (click)="goCustomerSuport()"><span class="material-icons">
+support_agent
+</span>  Suport</button>
+      <button class="customClassDashboard2" mat-button mat-button (click)="goHelp()"><span class="material-icons">
+support
+</span>  Ajutor?</button>
+      <button class="customClassDashboard2" mat-button mat-button (click)="goHelp()"><span class="material-icons">
+contact_support
+</span>  Cele mai fregvente intrabari
+      </button>
+    </mat-menu>
+  </li>
+</ul>
+<hr width="80%">
+<div class="customClassDashboard1">
+<!--<mat-grid-list class="customClassDashboard1" cols="5" rowHeight="90%">-->
+<!--  <mat-grid-tile [colspan]=5>-->
+<!--    <mat-list role="list">-->
       <router-outlet></router-outlet>
 
-    </mat-list></mat-grid-tile>
+<!--    </mat-list>-->
+<!--  </mat-grid-tile>-->
 
-  </mat-grid-list>
+<!--</mat-grid-list>-->
+<div>

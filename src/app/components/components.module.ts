@@ -14,32 +14,36 @@ import {FooterBarComponent} from './general/footer-bar/footer-bar.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { NotFoundComponent } from './general/not-found/not-found.component';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {SimplePagesModule} from '../simple-pages/simple-pages.module';
 
 
 @NgModule({
   declarations: [
     NavigationBarComponent,
     FooterBarComponent,
-    NotFoundComponent
+    NotFoundComponent,
   ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
-    AppRoutingModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatListModule,
-    MatButtonModule,
-    MatIconModule,
-    MatMenuModule,
-    CommonModule,
-    MatTabsModule
-  ],
-  exports: [
-    NavigationBarComponent,
-    FooterBarComponent,
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        HttpClientModule,
+        AppRoutingModule,
+        MatToolbarModule,
+        MatSidenavModule,
+        MatListModule,
+        MatButtonModule,
+        MatIconModule,
+        MatButtonToggleModule,
+        MatMenuModule,
+        CommonModule,
+        MatTabsModule,
+        SimplePagesModule
+    ],
+    exports: [
+        NavigationBarComponent,
+        FooterBarComponent,
 
-]
+    ]
 })
 export class ComponentsModule { }

@@ -5,47 +5,47 @@
     <form [formGroup]="RegistrationForm" (ngSubmit)="onSubmit()">
       <div class="form-group">
         <mat-label>Email</mat-label>
-        <input type="email" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
-        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
-          <div *ngIf="f.email.errors.required"><p>enter the email</p></div>
+        <input type="email" formControlName="email" class="form-control"/>
+          <div
+            *ngIf="RegistrationForm.get('email').invalid && RegistrationForm.get('email').touched"
+            STYLE="color: red" >email address is invalid</div>
         </div>
-      </div>
       <br>
       <div class="form-group">
         <mat-label>Name</mat-label>
-        <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
-        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
-          <div *ngIf="f.firstName.errors.required"><p>enter the Fristname</p></div>
-        </div>
+        <input type="text" formControlName="firstName" class="form-control"/>
+        <div
+          *ngIf="RegistrationForm.get('firstName').invalid && RegistrationForm.get('firstName').touched"
+          STYLE="color: red" >enter your first name</div>
       </div>
       <br>
       <div class="form-group">
         <mat-label>Surname</mat-label>
-        <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
-        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
-          <div *ngIf="f.lastName.errors.required"><p>enter the Lastname</p></div>
-        </div>
+        <input type="text" formControlName="lastName" class="form-control"/>
+        <div
+          *ngIf="RegistrationForm.get('lastName').invalid && RegistrationForm.get('lastName').touched"
+          STYLE="color: red" >enter your last name</div>
       </div>
       <br>
       <div class="form-group">
         <mat-label>Password</mat-label>
-        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
-        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-          <div *ngIf="f.password.errors.minlength"><p>
-            password must contain at least 10 characters</p></div>
-        </div>
+        <input type="password" formControlName="password" class="form-control"/>
+        <div
+          *ngIf="RegistrationForm.get('password').invalid && RegistrationForm.get('password').touched"
+          STYLE="color: red" >password must contain at least 10 characters</div>
+
       </div>
-      <mat-checkbox value="checked" (click)="changeValue(checked)"> I agree to the<a (click)="openDialog()">  terms and conditions</a> </mat-checkbox>
+      <mat-checkbox value="checked" (click)="changeValue(checked)"> I agree to the
+        <a (click)="openDialog()" >terms and conditions</a></mat-checkbox>
 
       <br>
 
-      <button [disabled]="loading || !checked" class="btn btn-primary" >
-        <span *ngIf="loading" ></span> Registration
+      <button [disabled]=" loading|| !checked|| RegistrationForm.invalid" class="btn btn-primary">
+        <span *ngIf="loading"></span> Registration
       </button>
       <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
     </form>
     <button mat-raised-button class="customClass5" (click)="helpRegAccount()">Help?</button>
-
 
   </div>
 

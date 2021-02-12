@@ -11,7 +11,6 @@ export class DashboardComponent implements OnInit {
   constructor( private router: Router) { }
   lS =  JSON.parse(localStorage.getItem('currentUser'));
   ngOnInit(): void {
-    console.log(this.lS.data.user.name);
   }
 
   goMyDashboard(): void {

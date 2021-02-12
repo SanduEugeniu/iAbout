@@ -1,24 +1,26 @@
-
 .customClass1{
   margin-left: auto;
   margin-right: auto;
-  margin-top: 200px;
+  margin-top: 100px;
   margin-block-end: 15%;
-  width: 30%;
+  width: 40%;
+  min-width: 250px;
   position: center;
   padding-top: 10px;
-}
-p{
-  color: red;
 }
 
 .customClass2{
   text-align: center;
   letter-spacing: 2px;
   width: 60%;
+  min-width: 200px;
   margin-right: auto;
   margin-left: auto;
 }
+p{
+  color: red;
+}
+
 .customClass4{
   margin-top: 30px;
   margin-block-end: 20px;
@@ -32,7 +34,7 @@ p{
   letter-spacing: 2px;
 }
 a {
-  color: black;
+  display : flex;
 }
 a:link {
   text-decoration: none;
@@ -50,3 +52,15 @@ a:active {
   text-decoration: none;
 }
 
+input.ng-touched.ng-invalid{
+border:1px solid red;
+}
+input.ng-touched.ng-valid{
+border:1px solid green;
+}
+mat-checkbox{
+color: red;
+}
+mat-checkbox.mat-checkbox-checked{
+color: green;
+}

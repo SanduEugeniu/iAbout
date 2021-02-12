@@ -12,16 +12,16 @@ import {MyResultsComponent} from './dashboard/pagesForDashboard/firstGrupPages/m
 import {MyPostsComponent} from './dashboard/pagesForDashboard/firstGrupPages/my-posts/my-posts.component';
 import {MyProfitComponent} from './dashboard/pagesForDashboard/firstGrupPages/my-profit/my-profit.component';
 import {MyMessagesComponent} from './dashboard/pagesForDashboard/firstGrupPages/my-messages/my-messages.component';
-import {MySettingsComponent} from './dashboard/pagesForDashboard/firstGrupPages/my-settings/my-settings.component';
 import {INeedAdvertisingComponent} from './dashboard/pagesForDashboard/secondGrupPages/i-need-advertising/i-need-advertising.component';
 import {ReceiveTheMoneyComponent} from './dashboard/pagesForDashboard/secondGrupPages/receive-the-money/receive-the-money.component';
 import {EnterMoneyComponent} from './dashboard/pagesForDashboard/secondGrupPages/enter-money/enter-money.component';
 import {CustomerSupportComponent} from './dashboard/pagesForDashboard/thirdGrupPages/customer-support/customer-support.component';
 import {HelpComponent} from './dashboard/pagesForDashboard/thirdGrupPages/help/help.component';
 import {ConfirmMailComponent} from './simple-pages/reg-pag/confirm-mail/confirm-mail.component';
-import {AddPostComponent} from './simple-pages/add-post/add-post.component';
-
-
+// import {AddPostComponent} from './simple-pages/add-post/add-post.component';
+import {PostPageComponent} from './post-page/post-page.component';
+import {AddPostPageComponent} from './simple-pages/add-post-page/add-post-page.component';
+import {MySettingsComponent} from './dashboard/pagesForDashboard/firstGrupPages/my-settings/my-settings.component';
 
 
 const routes: Routes = [
@@ -34,7 +34,9 @@ const routes: Routes = [
   {path: 'what-do-you-need-to-know-about-us', component: WhatDoYouNeedToKnowAboutUsComponent},
   {path: 'customerSupport', component: CustomerSupportComponent},
   {path: 'help', component: HelpComponent},
-  {path: 'add-post', component: AddPostComponent},
+  // {path: 'add-post', component: AddPostComponent},
+  {path: 'add-post', component: AddPostPageComponent},
+  {path: 'post/:id', component: PostPageComponent},
   {path: 'dashboard', component: DashboardComponent,
     children: [
       { path: '', component: MyResultsComponent },

@@ -5,4 +5,6 @@ export class User {
   firstName: string;
   lastName: string;
   token?: string;
+  success: boolean;
+  data: any;
 }
