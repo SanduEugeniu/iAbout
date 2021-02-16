@@ -24,12 +24,11 @@ this.getpostById();
   }
 
 
-  getpostById() {
+  getpostById(): any{
    this.getServer.getConfig()
       .pipe()
       .subscribe(
         data => {
-          console.log(data);
           return data;
         });
 

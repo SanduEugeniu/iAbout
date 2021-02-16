@@ -2,18 +2,18 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatInputModule} from '@angular/material/input';
-import { Tabs1Component } from './tabs1/tabs1.component';
+import { Tabs1Component } from './Table-on-the-main-page/tabs1.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { HowDoWeWinTogetherComponent } from './how-do-we-win-together/how-do-we-win-together.component';
 import { WhatDoYouNeedToKnowAboutUsComponent } from './what-do-you-need-to-know-about-us/what-do-you-need-to-know-about-us.component';
 import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
-import { LabelTop10PostsComponent } from './tabs1/top-10-posts/label-top10-posts.component';
-import { LabelTop10CategoriesComponent } from './tabs1/label-top10-categories/label-top10-categories.component';
-import { LabelTop10authorsComponent } from './tabs1/label-top10authors/label-top10authors.component';
-import { LabelRecommendationaComponent } from './tabs1/label-recommendationa/label-recommendationa.component';
-import { LabelHelpComponent } from './tabs1/label-help/label-help.component';
-import { LabelNewAuthorsComponent } from './tabs1/label-new-authors/label-new-authors.component';
-import { LabelTheLatestPostsComponent } from './tabs1/label-the-latest-posts/label-the-latest-posts.component';
+import { LabelTop10PostsComponent } from './Table-on-the-main-page/top-10-posts/label-top10-posts.component';
+import { LabelTop10CategoriesComponent } from './Table-on-the-main-page/label-top10-categories/label-top10-categories.component';
+import { LabelTop10authorsComponent } from './Table-on-the-main-page/label-top10authors/label-top10authors.component';
+import { LabelRecommendationaComponent } from './Table-on-the-main-page/label-recommendationa/label-recommendationa.component';
+import { LabelHelpComponent } from './Table-on-the-main-page/label-help/label-help.component';
+import { LabelNewAuthorsComponent } from './Table-on-the-main-page/label-new-authors/label-new-authors.component';
+import { LabelTheLatestPostsComponent } from './Table-on-the-main-page/label-the-latest-posts/label-the-latest-posts.component';
 import {ComponentsModule} from '../components/components.module';
 import {ReactiveFormsModule} from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
@@ -27,16 +27,16 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
 import {NavigationBarComponent} from '../components/general/navigation-bar/navigation-bar.component';
 import { ConfirmMailComponent } from './reg-pag/confirm-mail/confirm-mail.component';
-// import {AddPostComponent, BottomComponent} from './add-post/add-post.componentnt';
 import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 import {MatListModule} from '@angular/material/list';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatMenuModule} from '@angular/material/menu';
-import { CategoriesComponent } from './tabs1/categories/categories.component';
+import { CategoriesComponent } from './Table-on-the-main-page/categories/categories.component';
 import {AdsenseModule} from 'ng2-adsense';
-import { AddPostPageComponent } from './add-post-page/add-post-page.component';
 import { QuillModule } from 'ngx-quill';
+import {AddPostPageComponent} from '../dashboard/add-post-page/add-post-page.component';
+import {AppModule} from '../app.module';
 
 
 @NgModule({
@@ -56,8 +56,6 @@ import { QuillModule } from 'ngx-quill';
     RegPagComponent,
     DialogElementsExampleDialog,
     ConfirmMailComponent,
-    // AddPostComponent,
-    // BottomComponent,
     CategoriesComponent,
     AddPostPageComponent,
   ],

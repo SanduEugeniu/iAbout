@@ -17,6 +17,7 @@ export class RegPagComponent implements OnInit {
   submitted = false;
   returnUrl: string;
   error = '';
+  errorS = '';
   checked: boolean;
 
   constructor(
@@ -64,8 +65,10 @@ export class RegPagComponent implements OnInit {
             this.loading = false;
             this.error = data.data.message;
         }
+        }, error => {
+          this.errorS = 'Error server';
+          this.loading = false;
         },
-        this.loading = false
   );
   }
 

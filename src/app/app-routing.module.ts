@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
-import {Tabs1Component} from './simple-pages/tabs1/tabs1.component';
+import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
+import {Tabs1Component} from './simple-pages/Table-on-the-main-page/tabs1.component';
 import {LoginPageComponent} from './simple-pages/login-page/login-page.component';
 import {HowDoWeWinTogetherComponent} from './simple-pages/how-do-we-win-together/how-do-we-win-together.component';
 import {TermsAndConditionsComponent} from './simple-pages/terms-and-conditions/terms-and-conditions.component';
@@ -20,8 +20,10 @@ import {HelpComponent} from './dashboard/pagesForDashboard/thirdGrupPages/help/h
 import {ConfirmMailComponent} from './simple-pages/reg-pag/confirm-mail/confirm-mail.component';
 // import {AddPostComponent} from './simple-pages/add-post/add-post.component';
 import {PostPageComponent} from './post-page/post-page.component';
-import {AddPostPageComponent} from './simple-pages/add-post-page/add-post-page.component';
 import {MySettingsComponent} from './dashboard/pagesForDashboard/firstGrupPages/my-settings/my-settings.component';
+import {AuthGuard} from './common/_guard/auth.guard';
+import {NotAuthComponent} from './common/_notAuthPage/not-auth/not-auth.component';
+import {AddPostPageComponent} from './dashboard/add-post-page/add-post-page.component';
 
 
 const routes: Routes = [
@@ -35,9 +37,8 @@ const routes: Routes = [
   {path: 'customerSupport', component: CustomerSupportComponent},
   {path: 'help', component: HelpComponent},
   // {path: 'add-post', component: AddPostComponent},
-  {path: 'add-post', component: AddPostPageComponent},
   {path: 'post/:id', component: PostPageComponent},
-  {path: 'dashboard', component: DashboardComponent,
+  {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard],
     children: [
       { path: '', component: MyResultsComponent },
       { path: 'myPosts', component: MyPostsComponent },
@@ -47,7 +48,12 @@ const routes: Routes = [
       { path: 'iNeedAdvertising', component: INeedAdvertisingComponent },
       { path: 'receiveTheMoney', component: ReceiveTheMoneyComponent },
       { path: 'enterMoney', component: EnterMoneyComponent },
+      {path: 'add-post', component: AddPostPageComponent},
+
     ]},
+
+  // Not Auth
+  {path: 'notAuth', component: NotAuthComponent},
 
   // Not Found
   {path: '**', component: NotFoundComponent},
@@ -55,7 +61,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    // preloadingStrategy: PreloadAllModules
+  })],
   exports: [RouterModule]
 })
 

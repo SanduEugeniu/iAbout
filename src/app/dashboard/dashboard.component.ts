@@ -63,6 +63,6 @@ export class DashboardComponent implements OnInit {
   }
 
   goAddPost(): void {
-    this.router.navigate(['/add-post'] );
+    this.router.navigate(['/dashboard/add-post'] );
   }
 }

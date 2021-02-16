@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  // apiUrl: 'https://beappi.herokuapp.com'
-  apiUrl: 'https://localhost:3000'
+  apiUrl: 'https://beappi.herokuapp.com'
+  // apiUrl: 'https://localhost:3000'
 };
 
 /*

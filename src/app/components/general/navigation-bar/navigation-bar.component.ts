@@ -1,8 +1,8 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {NavigationEnd, Router} from '@angular/router';
 import {AuthenticationService} from '../../../simple-pages/login-page/_service/authentication.service';
-import {CurentUserService} from "../../../common/_services/curent-user.service";
-import {DomSanitizer} from "@angular/platform-browser";
+import {CurentUserService} from '../../../common/_services/curent-user.service';
+import {DomSanitizer} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-navigation-bar',
